@@ -1,0 +1,73 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.navbar-fixed nav .brand-logo {
+  font-weight: 100;
+  font-size: 1.3em;
+}
+
+.nav-wrapper .text-logo {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.parallax img {
+  height: 60em;
+}
+
+.parallax-container {
+  height: 45em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.font-helvetica {
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.center-div {
+  width: 40%;
+    position: relative;
+    margin: 0 auto;
+      top: 15em;
+      opacity: 0.86;
+ }
+ 
+ 
+ .without-margin {
+  padding : 0.5em !important;
+ }
+ 
+ .card-small-custom {
+  height: 16em !important;
+ }
+ 
+   .showbox {
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+  }
+  .showbox.slideright:hover {
+  -webkit-transform: scale(1.1,1.1);
+  -moz-transform: scale(1.1,1.1);
+  -o-transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
+  }
