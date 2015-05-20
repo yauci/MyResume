@@ -8,27 +8,38 @@
   <!-- CSS  -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/base.css">    
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
   
       <script>
     $(document).ready(function(){
       $('.parallax').parallax();
-          $('.scrollspy').scrollSpy();
+      $('.scrollspy').scrollSpy();
+      $('ul.tabs').tabs();
+      $('ul.tabs').tabs('select_tab', 'tab_id');
+
 
       
       
-            $('.modal-trigger').leanModal({
-      dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      opacity: .5, // Opacity of modal background
-      in_duration: 400, // Transition in duration
-      out_duration: 200, // Transition out duration
-      ready: function() {  }, // Callback for Modal open
-      complete: function() {  } // Callback for Modal close
-    }
-  );
+      $('.modal-trigger').leanModal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        in_duration: 400, // Transition in duration
+        out_duration: 200, // Transition out duration
+        ready: function() {  }, // Callback for Modal open
+        complete: function() {  } // Callback for Modal close
+      });
       
           // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
+      $('.modal-trigger').leanModal();
+    
+      $('.collapsible').collapsible({
+        accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+      });
+    
+      $('.tooltipped').tooltip({delay: 50});
+    
     });
  
     </script>
@@ -43,54 +54,101 @@
       
       <ul class="right hide-on-med-and-down">
         <li>
+          <a href="#usr" >      
+             <i class="fa fa-user tooltipped" data-delay="50" data-tooltip="About me"></i>
+          </a>
+        </li>        
+        <li>
           <a href="#work" >      
-             <i class="mdi-action-description"></i>
+             <i class="mdi-action-dashboard tooltipped" data-delay="50" data-tooltip="Projects"></i>
           </a>
         </li>
         <li>
           <a href="#skills" >      
-             <i class="mdi-action-assessment"></i>
+             <i class="mdi-action-assessment tooltipped" data-delay="50" data-tooltip="Skills"></i>
           </a>
         </li>
+        <li>
+          <a href="#education" >      
+             <i class="fa fa-graduation-cap tooltipped" data-delay="50" data-tooltip="Education"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#exp" >      
+             <i class="mdi-image-timer tooltipped" data-delay="50" data-tooltip="Work"></i>
+          </a>
+        </li>       
+        <li>
+          <a href="data/Resume.pdf" >      
+             <i class="fa fa-file-pdf-o tooltipped" data-delay="50" data-tooltip="Resume"></i>
+          </a>
+        </li>        
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#work">Navbar Link</a></li>
+   
+ <li>
+          <a href="#usr" >      
+             <i class="fa fa-user tooltipped flow-text" data-delay="50" data-tooltip="About me">About</i>
+          </a>
+        </li>        
+        <li>
+          <a href="#work" >      
+             <i class="mdi-action-dashboard tooltipped flow-text" data-delay="50" data-tooltip="Projects">Projects</i>
+          </a>
+        </li>
+        <li>
+          <a href="#skills" >      
+             <i class="mdi-action-assessment tooltipped flow-text" data-delay="50" data-tooltip="Skills">Skills</i>
+          </a>
+        </li>
+        <li>
+          <a href="#education" >      
+             <i class="fa fa-graduation-cap tooltipped flow-text" data-delay="50" data-tooltip="Education">Education</i>
+          </a>
+        </li>
+        <li>
+          <a href="#exp" >      
+             <i class="mdi-image-timer tooltipped flow-text" data-delay="50" data-tooltip="Work">Work</i>
+          </a>
+        </li>       
+        <li>
+          <a href="data/Resume.pdf" >      
+             <i class="fa fa-file-pdf-o tooltipped flow-text" data-delay="50" data-tooltip="Resume">Resume</i>
+          </a>
+        </li> 
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
   </nav>
       </div>
 
-  <div id="title" class="parallax-container">
-    <div class="parallax">
-      <img src="img/photofront1.jpg">
-      <div class="text-center text-white header font-helvetica center-div" style="-webkit-transform: translateZ(1px)">
-                <h2><b>Yauxi Xerach Doña Sosa</b></h2>
-                <h5 class="weight-300">I am a Computer Engeenier</h5>
+  <div id="usr" class="div-href scrollspy" ></div>
+  
+    <div class="section white">
+    <div class="row container">
+<div id="about_column1wide"> </div>  </div>
+  </div>
 
-    </div>
-      
-  </div>
-  </div>
-  <div id="work" class="section white scrollspy">
-        <div class="row">
+
+  <div  class="section white scrollspy">
+        <div id="work" class="row card-basic-custom scrollspy container">
     
-    <div class="col s4 row container">
+    <div class="col s12 m4 row container ">
         
        <div class="card small card-small-custom">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="img/sgspreview.png">
         </div>
         <div class="card-content without-margin">
-          <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="modal-trigger" href="#modal1">This is a link</a></p>
+          <span class="card-title activator grey-text text-darken-4">SGS APPS <i class="mdi-navigation-more-vert right"></i></span>
+          <p><a class="modal-trigger" href="#modal2">Read more...</a></p>
             
               <!-- Modal Trigger -->
 
 
   <!-- Modal Structure -->
-  <div id="modal1" class="modal modal-fixed-footer">
+  <div id="modal2" class="modal modal-fixed-footer">
     <div class="modal-content">
       <h4>Modal Header</h4>
       <p>A bunch of text</p>
@@ -108,14 +166,28 @@
        </div>
    </div>
             
-   <div class="col s4 row container">
+   <div class="col s12 m4 row container">
       <div class="card small card-small-custom">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="img/axapreview1.png">
         </div>
         <div class="card-content without-margin">
           <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
-          <p><a href="#">This is a link</a></p>
+          <p><a class="modal-trigger" href="#modal1">Read more...</a></p>
+            
+              <!-- Modal Trigger -->
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
@@ -123,14 +195,32 @@
         </div>
       </div>
    </div> 
-   <div class="col s4 row container">
+   
+   
+   
+   
+   <div class="col s12 m4 row container">
       <div class="card small card-small-custom">
           <div class="card-image waves-effect waves-block waves-light">
              <img class="activator" src="img/axapreview2.png">
           </div>
       <div class="card-content without-margin">
           <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
-          <p><a href="#">This is a link</a></p>
+          <p><a class="modal-trigger" href="#modal3">Read more...</a></p>
+            
+              <!-- Modal Trigger -->
+
+
+  <!-- Modal Structure -->
+  <div id="modal3" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
       </div>
        <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
@@ -139,11 +229,8 @@
       </div>
    </div>
         
-   </div>
-   
-           <div class="row">
     
-    <div class="col s4 row container">
+    <div class="col s12 m4 row container">
         
        <div class="card small card-small-custom">
         <div class="card-image waves-effect waves-block waves-light">
@@ -151,7 +238,21 @@
         </div>
         <div class="card-content without-margin">
           <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
-          <p><a href="#">This is a link</a></p>
+          <p><a class="modal-trigger" href="#modal4">Read more...</a></p>
+            
+              <!-- Modal Trigger -->
+
+
+  <!-- Modal Structure -->
+  <div id="modal4" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
@@ -160,14 +261,28 @@
        </div>
    </div>
             
-   <div class="col s4 row container">
+   <div class="col s12 m4 row container">
       <div class="card small card-small-custom">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="img/tilppreview.png">
         </div>
         <div class="card-content without-margin">
           <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
-          <p><a href="#">This is a link</a></p>
+          <p><a class="modal-trigger" href="#modal5">Read more...</a></p>
+            
+              <!-- Modal Trigger -->
+
+
+  <!-- Modal Structure -->
+  <div id="modal5" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
@@ -175,18 +290,55 @@
         </div>
       </div>
    </div> 
-   <div class="col s4 row container">
-      <div class="card small card-small-custom showbox slideright">
+   
+   
+   
+   <div class="col s12 m4 row container">
+      <div class="card small card-small-custom ">
           <div class="card-image waves-effect waves-block waves-light">
              <img class="activator" src="img/pgipreview.png">
           </div>
       <div class="card-content without-margin">
-          <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
-          <p><a href="#">This is a link</a></p>
+          <span class="card-title activator grey-text text-darken-4">PGI APP<i class="mdi-navigation-more-vert right"></i></span>
+          <p><a class="modal-trigger" href="#modal6">Read more...</a></p>
+            
+              <!-- Modal Trigger -->
+
+
+  <!-- Modal Structure -->
+  <div id="modal6" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Portal Gestor de Incidencias</h4>
+      <p>Aplicacion web que gestiona un portal para mantener incidencias, 
+            a su vez compuesto por una aplicacion de campo para moviles, donde
+            la comunicacion se realizara a traves de web service.
+      </p>
+        <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#test1">Test 1</a></li>
+        <li class="tab col s3"><a class="active" href="#test2">Test 2</a></li>
+        <li class="tab col s3"><a href="#test3">Test 3</a></li>
+        <li class="tab col s3"><a href="#test4">Test 4</a></li>
+      </ul>
+    </div>
+    <div id="test1" class="col s12">Test 1</div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
+    <div id="test4" class="col s12">Test 4</div>
+  </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
       </div>
        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          <span class="card-title grey-text text-darken-4">PGI APP<i class="mdi-navigation-close right"></i></span>
+          <p>Aplicacion web que gestiona un portal para mantener incidencias, 
+            a su vez compuesto por una aplicacion de campo para moviles, donde
+            la comunicacion se realizara a traves de web service.
+          </p>
        </div>
       </div>
    </div>
@@ -194,15 +346,14 @@
    </div> 
    
   </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="img/photofront1.jpg"></div>
-  </div>
+
+  <div id="skills" class="div-href scrollspy" ></div>
   
-    <div  id="skills" class="section white scrollspy">
+    <div   class="section white scrollspy">
       
       
       
-    <div class="col s12 row container card-basic-custom">
+    <div  class="col s12 row container card-basic-custom scrollspy">
       
       
     <div class="card ">
@@ -210,107 +361,112 @@
           <span class="card-title h2-black">Advanced</span>
              <div class="col s12 row">
                           
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/visual2008.png" class="responsive-img no-flex">
                   <h6>VS 2008</h6>
                 </div>
              
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/visual2010.png" class="responsive-img no-flex">
                   <h6>VS 2010</h6>
                 </div>
                 
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/vs2012.png" class="responsive-img no-flex">
                   <h6>VS 2012</h6>
                 </div>
              
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/vs2013.png" class="responsive-img no-flex">
                   <h6>VS 2013</h6>
                 </div>
-
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/sqlserver.jpg" class="responsive-img no-flex">
-                  <h6>SQL SERVER</h6>
-                </div>
-             
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/asp.png" class="responsive-img no-flex">
-                  <h6>ASP.NET</h6>
-                </div>
                 
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/MVC4.jpg" class="responsive-img no-flex">
-                  <h6>MVC 4</h6>
-                </div>
-             
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/csa.png" class="responsive-img no-flex">
-                  <h6>C#</h6>
-                </div> 
-                
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/tfs.png" class="responsive-img no-flex">
                   <h6>TFS 2010</h6>
                 </div>
              
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/tfs2012.png" class="responsive-img no-flex">
                   <h6>TFS 2012</h6>
+                </div>                
+
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/sqlserver.jpg" class="responsive-img no-flex">
+                  <h6>SQL SERVER</h6>
                 </div>
                 
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/teamcity.png" class="responsive-img no-flex">
-                  <h6>TEAM CITY</h6>
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/79_Packages-en-Oracle.jpg" class="responsive-img no-flex">
+                  <h6>PL/SQL</h6>
+                </div>                
+             
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/asp.png" class="responsive-img no-flex">
+                  <h6>ASP.NET</h6>
+                </div>
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/MVC4.jpg" class="responsive-img no-flex">
+                  <h6>MVC 4</h6>
                 </div>
              
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/SourceSafeLogo.jpg" class="responsive-img no-flex">
-                  <h6>VSS</h6>
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/csa.png" class="responsive-img no-flex">
+                  <h6>C#</h6>
                 </div>
                 
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/linq.png" class="responsive-img no-flex">
+                  <h6>LINQ</h6>
+                </div>                 
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/jquery-logo.png" class="responsive-img no-flex">
+                  <h6>JQUERY</h6>
+                </div>                
+                
+                <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/html5-logo.png" class="responsive-img no-flex">
                   <h6>HTML5</h6>
                 </div>
                 
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/css3-logo.png" class="responsive-img no-flex">
                   <h6>CSS3</h6>
                 </div>
              
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/javascript-logo.png" class="responsive-img no-flex">
                   <h6>JS</h6>
-                </div> 
-
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/79_Packages-en-Oracle.jpg" class="responsive-img no-flex">
-                  <h6>PL/SQL</h6>
-                </div>
+                </div>                 
                 
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/teamcity.png" class="responsive-img no-flex">
+                  <h6>TEAM CITY</h6>
+                </div>
+             
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/SourceSafeLogo.jpg" class="responsive-img no-flex">
+                  <h6>VSS</h6>
+                </div>
+                               
+                <div class="img-wrap tam-wrap col s4 m3">
                   <img src="img/New_Mercurial_logo.png" class="responsive-img no-flex">
                   <h6>MERCURIAL</h6>
                 </div>                
              
-                <div class="img-wrap tam-wrap col s2">
+                <div class="img-wrap tam-wrap col s4 m3">
                   <img src="img/subversion_logo.png" class="responsive-img no-flex">
                   <h6>SVN</h6>
                 </div>
                 
-                <div class="img-wrap tam-wrap col s4">
+                <div class="img-wrap tam-wrap col s4 m3">
                   <img src="img/git_logo.png" class="responsive-img no-flex">
                   <h6>GIT</h6>
-                </div>
-             
-                <div class="img-wrap tam-wrap col s4">
-                  <img src="img/jquery-logo.png" class="responsive-img no-flex">
-                  <h6>JQUERY</h6>
                 </div> 
                 
-                <div class="img-wrap tam-wrap col s4">
+                <div class="img-wrap tam-wrap col s12 m3">
                   <img src="img/nuget.png" class="responsive-img no-flex">
                   <h6>NUGET</h6>
                 </div> 
@@ -327,104 +483,396 @@
       
     <div class="card ">
        <div class="card-content">
-          <span class="card-title h2-black">Advanced</span>
+          <span class="card-title h2-black">Strong</span>
              <div class="col s12 row">
-                          
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/visual2008.png" class="responsive-img no-flex">
-                  <h6>VS 2008</h6>
-                </div>
+
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/java.jpg" class="responsive-img no-flex">
+                  <h6>JAVA</h6>
+                </div>  
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/android.png" class="responsive-img no-flex">
+                  <h6>ANDROID</h6>
+                </div>                  
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/Icon-Visual_Basic_for_Applications.png" class="responsive-img no-flex">
+                  <h6>VB 6</h6>
+                </div>                             
              
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/css3-logo.png" class="responsive-img no-flex">
-                  <h6>CSS 3</h6>
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/typescriptLogo.png" class="responsive-img no-flex">
+                  <h6>TYPESCRIPT</h6>
+                </div>                                           
+                          
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/nodejs_logo.png" class="responsive-img no-flex">
+                  <h6>NODEJS</h6>
                 </div>
                 
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/css3-logo.png" class="responsive-img no-flex">
-                  <h6>CSS 3</h6>
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/mysql-logo.png" class="responsive-img no-flex">
+                  <h6>MY SQL</h6>
+                </div>                
+             
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/mongo.png" class="responsive-img no-flex">
+                  <h6>MONGODB</h6>
+                </div>
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/bootstrap.png" class="responsive-img no-flex">
+                  <h6>BOOTSTRAP</h6>
+                </div>                
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/materi.png" class="responsive-img no-flex">
+                  <h6>MATERIALIZE</h6>
+                </div>             
+
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/jqueryui.png" class="responsive-img no-flex">
+                  <h6>JQUERY UI</h6>
+                </div>             
+                            
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/fa.jpg" class="responsive-img no-flex">
+                  <h6>FONT AWESOME</h6>
+                </div> 
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/nh.png" class="responsive-img no-flex">
+                  <h6>NHIBERNATE</h6>
                 </div>
              
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/css3-logo.png" class="responsive-img no-flex">
-                  <h6>CSS 3</h6>
+                <div class="img-wrap tam-wrap col s4 m3">
+                  <img src="img/autompper.png" class="responsive-img no-flex">
+                  <h6>AUTO MAPPER</h6>
+                </div>
+                
+                <div class="img-wrap tam-wrap col s4 m3">
+                  <img src="img/mencached.jpg" class="responsive-img no-flex">
+                  <h6>MENCACHED</h6>
                 </div>
 
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/css3-logo.png" class="responsive-img no-flex">
-                  <h6>CSS 3</h6>
-                </div>
-             
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/css3-logo.png" class="responsive-img no-flex">
-                  <h6>CSS 3</h6>
+                <div class="img-wrap tam-wrap col s4 m3">
+                  <img src="img/gapis.png" class="responsive-img no-flex">
+                  <h6>GOOGLE APIS</h6>
                 </div>
                 
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/css3-logo.png" class="responsive-img no-flex">
-                  <h6>CSS 3</h6>
+                <div class="img-wrap tam-wrap col s12 m3">
+                  <img src="img/yii-logo.png" class="responsive-img no-flex">
+                  <h6>YII FRAMEWORK</h6>
+                </div>
+                                                              
+             
+             </div>
+            </div>
+      </div>
+      
+         </div>
+      
+        <div class="col s12 row container card-basic-custom">
+      
+      
+    <div class="card ">
+       <div class="card-content">
+          <span class="card-title h2-black">High</span>
+             <div class="col s12 row">                          
+             
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/react.png" class="responsive-img no-flex">
+                  <h6>REACT</h6>
+                </div>
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/meteor.png" class="responsive-img no-flex">
+                  <h6>METEOR</h6>
+                </div>
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/coffeescript-logo.png" class="responsive-img no-flex">
+                  <h6>COFFESCRIPT</h6>
+                </div> 
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/angular-logo.png" class="responsive-img no-flex">
+                  <h6>ANGULAR</h6>
+                </div>
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/cordova.jpg" class="responsive-img no-flex">
+                  <h6>CORDOVA</h6>
                 </div>
              
-                <div class="img-wrap tam-wrap col s2">
-                  <img src="img/css3-logo.png" class="responsive-img no-flex">
-                  <h6>CSS 3</h6>
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/bower.png" class="responsive-img no-flex">
+                  <h6>BOWER</h6>
+                </div>  
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/grunt.jpg" class="responsive-img no-flex">
+                  <h6>GRUNT</h6>
+                </div>
+             
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/yeoman.jpg" class="responsive-img no-flex">
+                  <h6>YEOMAN</h6>
+                </div>
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/gulp-logo.png" class="responsive-img no-flex">
+                  <h6>GULP</h6>
+                </div>
+             
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/bb.png" class="responsive-img no-flex">
+                  <h6>BACKBONE</h6>
+                </div> 
+                
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/less-logo.png" class="responsive-img no-flex">
+                  <h6>LESS</h6>
+                </div>                                             
+                
+                <div class="img-wrap tam-wrap col s4 m2">
+                  <img src="img/polymer.png" class="responsive-img no-flex">
+                  <h6>POLYMER</h6>
                 </div>                                                
+             
+                <div class="img-wrap tam-wrap col s4 m3">
+                  <img src="img/OAuth2.png" class="responsive-img no-flex">
+                  <h6>OAUTH</h6>
+                </div>
+
+                <div class="img-wrap tam-wrap col s4 m3">
+                  <img src="img/tapis.png" class="responsive-img no-flex">
+                  <h6>TWITTER API</h6>
+                </div>                             
+
+                <div class="img-wrap tam-wrap col s4 m3">
+                  <img src="img/facebook-developers.jpg" class="responsive-img no-flex">
+                  <h6>FACEBOOK API</h6>
+                </div>
+             
+                <div class="img-wrap tam-wrap col s12 m3">
+                  <img src="img/dropbox-logo.png" class="responsive-img no-flex">
+                  <h6>DROPBOX API</h6>
+                </div>                                                                              
              
              </div>
             </div>
       </div>
          
    </div>
-    
-    
-      </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="img/photofront1.jpg"></div>
-  </div>
+   
 
   </div>
   
+  <div id="education" class="div-href scrollspy" ></div>
   
+   <div  class="section white scrollspy">
+    <div id="education" class="row container card-basic-custom">
+
+
+   <div id="timeline">
+  <div class="timeline-item">
+    <div class="timeline-icon blue darken-1"></div>
+    <div class="timeline-content">
+      <h6> 2015</h6>
+      <p> Analisis e ingeniería de requisitos </p>
+
+  </div>
   
   
     </div>
+  <div class="timeline-item">
+    <div class="timeline-icon  yellow darken-1"> </div>
+    <div class="timeline-content right">
+      <h6> 2014</h6>
+      <p> Programación Oracle 11g PL SQL </p>
 
+  </div>
+    </div>
+  
+    <div class="timeline-item">
+    <div class="timeline-icon   deep-orange darken-2"> </div>
+    <div class="timeline-content ">
+      <h6> 2013</h6>
+      <p> Fundamentos de sistemas de gestión de ERP para pyme: SAP Business one  </p>
+      <p> Desarrollo de aplicaciones web con Ruby on Rails </p>
 
-  <footer class="page-footer orange without-margin-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+  </div>
+  
+  </div>
+  
+    <div class="timeline-item">
+    <div class="timeline-icon  green darken-2"> </div>
+    <div class="timeline-content right">
+      <h6> 2012</h6>
+      <p> Desarrollo rápido de aplicaciones web con cakephp 2.0 </p>
 
+  </div>
+  
+    </div>
+    
+        <div class="timeline-item">
+    <div class="timeline-icon  deep-purple darken-2"> </div>
+    <div class="timeline-content right">
+      <h6> 2012/2014</h6>
+      <p> Computer Engineering, Honours Bachelor Degree(NFQ Level 8) </p>
 
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
+  </div>
+  
+    </div>
+  
+  <div class="timeline-item">
+    <div class="timeline-icon   pink darken-2"> </div>
+    <div class="timeline-content">
+      <h6>2007/2012</h6>
+      <p> Technical Computer Engineering in Management </p>
+  </div>
+</div>    </div>
+  </div>
+  
+  
+  
+  
+
+  
+ 
+  
+
+  </div>
+  
+
+  
+    </div>
+
+      <div id="exp" class="section white scrollspy">
+    <div class="row container card-basic-custom">
+        <ul class="collapsible popout" data-collapsible="expandable">
+    <li>
+      <div class="collapsible-header"><i class="fa fa-laptop"></i>Métrica Consulting S.L</div>
+      <div class="collapsible-body">
+         <div class="img-wrap tam-wrap col s12 m3">
+                  <img src="img/metrica.png" class="responsive-img no-flex">
+                         
+         </div> 
+          <p>April 2015/ Now (2 Month)</p>
+          <p>Programmer Analyst in Métrica Consulting S.L, as internal in I+D+I department.</p>
       </div>
-    </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="fa fa-keyboard-o"></i>Entelgy</div>
+            <div class="collapsible-body">
+         <div class="img-wrap tam-wrap col s12 m3">
+                  <img src="img/entelgy.gif" class="responsive-img no-flex">
+                         
+         </div> 
+          <p>May 2014/ April 2015 (1 Year)</p>
+          <p>Programmer Analyst in Métrica Consulting S.L, as internal in I+D+I department.</p>
+      </div>    
+      </li>
+    <li>
+      <div class="collapsible-header"><i class="fa fa-desktop"></i>Inaco C.L</div>
+            <div class="collapsible-body">
+         <div class="img-wrap tam-wrap col s12 m3">
+                  <img src="img/inaco.png" class="responsive-img no-flex">
+                         
+         </div> 
+          <p>January 2013/ May 2014 (1 Year, 5 Month)</p>
+          <p>Software engineer in Inaco C.L. (.Net developer).</p>
+      </div>    
+      </li>
+      
+          <li>
+      <div class="collapsible-header"><i class="fa fa-server"></i>ULL</div>
+            <div class="collapsible-body">
+         <div class="img-wrap tam-wrap col s12 m3">
+                  <img src="img/ull_color_vertical.jpg" class="responsive-img no-flex">
+                         
+         </div> 
+          <p>September 2011/ January 2013 (1 Year, 4 Month)</p>
+          <p>Scholarship at University of "La Laguna" in classroom of computing in college of Philology.</p>
+      </div>    
+      </li>
+      
+                <li>
+      <div class="collapsible-header"><i class="fa fa-cloud"></i>Freelance</div>
+            <div class="collapsible-body">
+             <ul class="collapsible popout" data-collapsible="expandable">
+    <li>
+      <div class="collapsible-header"><i class="fa fa-mobile"></i>PH y Punto</div>
+      <div class="collapsible-body">
+         <div class="img-wrap tam-wrap col s12 m3">
+                  <img src="img/LogoCataiPeque.jpg" class="responsive-img no-flex">
+                         
+         </div> 
+          <p>May 2013/ March 2014 (11 Month)</p>
+          <p>PH y Punto: Android app for CATAI of Medicine faculty.</p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="fa fa-keyboard-o"></i>Yii Framework</div>
+            <div class="collapsible-body"> 
+          <p>June 2014/ December 2014 (7 Month)</p>
+          <p>App web in Yii Framework for http://www.hotelbeds.com/ .</p>
+      </div>    
+      </li>
+     
+      
+      
+      
+  </ul>    </div>      </div>    
+      </li>
+      
+      
+      
+  </ul>    </div>
+  </div>
+
+
+  <footer class="page-footer blue  lighten-2 without-margin-footer">
+
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Made by Yaxuids
       </div>
     </div>
   </footer>
+  
+  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="large mdi-navigation-more-vert"></i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red" href="index.html" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px);"><i class="large mdi-action-home"></i></a></li>
+      <li><a class="btn-floating yellow darken-1" href="mailto:yauxids@gmail.com" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px);"><i class="large mdi-communication-email
+"></i></a></li>
+      <li>
+        <a class="btn-floating blue darken-1" href="https://es.linkedin.com/pub/yauxi-doña/45/402/bb5" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px);"><i class="fa  fa-linkedin  fa-2x" style="color:#fff;" title="LinkedIn">
+          </i>
+       </a>
+      </li>
+      
+            <li>
+        <a class="btn-floating black darken-1" href="https://github.com/yauci" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px);"><i class="fa  fa-github  fa-2x" style="color:#fff;" title="GitHub">
+          </i>
+       </a>
+      </li>
+      
+      <li>
+        <a class="btn-floating blue darken-3" href="https://bitbucket.org/yauxids" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px);"><i class="fa  fa-bitbucket  fa-2x" style="color:#fff;" title="BitBucket">
+          </i>
+       </a>
+      </li>      
+      
+      
+    </ul>
+  </div>
 
 
   <!--  Scripts-->
