@@ -175,3 +175,60 @@ div#about_column1wide {
   margin: 69px 0 0 0;
 }
 
+
+.aboutme-tem {
+  height: 805px !Important;
+}
+
+
+.border-left-custon{
+  
+  border-left: solid #D0D0D0 ;
+  
+}
+
+
+  
+  .padding-icon{
+   
+     padding-left: 10px;
+  padding-right: 10px;
+    
+  }
+  
+   .padding-icon-more-left{
+   
+     padding-left: 12px;
+  padding-right: 12px;
+    
+  }
+  
+     .padding-icon-home{
+   
+     padding-left: 7px;
+  padding-right: 6px;
+    
+  }
+  
+blockquote-blue{
+  
+    border-left: 5px solid #03a9f4 !important;
+}
+
+.font-h4{
+  
+  font-weight: 200 !Important;
+  
+}
+
+.color-font-blue{
+  
+    color: #03a9f4 !important;
+}
+
+.padding-center{
+  
+  padding-bottom: 10em;
+  padding-top: 10em;
+  
+}
