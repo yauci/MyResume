@@ -232,3 +232,16 @@ blockquote-blue{
   padding-top: 10em;
   
 }
+
+@media (max-width: 768px){
+.padding-center{
+  
+  padding-bottom: 0px;
+  padding-top: 0px;
+  
+}
+
+.aboutme-tem {
+  height: 100% !important;
+}
+}
