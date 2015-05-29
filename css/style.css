@@ -247,7 +247,7 @@ blockquote-blue{
 
 .center-align-custom{
   
-  padding-left: 0 !Important;
+  padding-left: 1.5em !Important;
   
 }
 
@@ -257,8 +257,13 @@ blockquote-blue{
   top: 65px !Important;
 }
 
+
+@media (min-width: 768px){
 .center-align-custom{
   
   padding-left: 10% !Important;
   
 }
+
+}
+
