@@ -245,3 +245,13 @@ blockquote-blue{
   height: 100% !important;
 }
 }
+
+.top-custom {
+  top: 65px !Important;
+}
+
+.center-align-custom{
+  
+  padding-left: 10em !Important;
+  
+}

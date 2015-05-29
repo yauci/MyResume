@@ -9,6 +9,7 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ihover.css" >
   <link rel="stylesheet" href="css/base.css">    
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
   
@@ -41,6 +42,16 @@
       });
     
       $('.tooltipped').tooltip({delay: 50});
+      
+       $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false // Displays dropdown below the button
+    }
+  );
     
     });
  
@@ -77,9 +88,16 @@
           </a>
         </li>
         <li>
-          <a href="#skills" >      
-             <i class="mdi-action-assessment tooltipped" data-delay="50" data-tooltip="Skills"></i>
+          <a href='#skills' class="dropdown-button" data-activates="dropdownSkills"  >      
+             <i class="mdi-action-assessment tooltipped flow-text " data-position="left"  data-delay="50" data-tooltip="Skills"></i>
           </a>
+          
+            <!-- Dropdown Structure -->
+  <ul id='dropdownSkills' class='dropdown-content top-custom'>
+    <li><a href="#skills">Advance</a></li>
+    <li><a href="#skillsStrong">Strong</a></li>
+    <li><a href="#skillsHigh">High</a></li>
+  </ul>
         </li>
         <li>
           <a href="#education" >      
@@ -112,8 +130,9 @@
         </li>
         <li>
           <a href="#skills" >      
-             <i class="mdi-action-assessment tooltipped flow-text" data-delay="50" data-tooltip="Skills">Skills</i>
+             <i class="mdi-action-assessment tooltipped flow-text " data-delay="50" data-tooltip="Skills">Skills</i>
           </a>
+          
         </li>
         <li>
           <a href="#education" >      
@@ -145,8 +164,24 @@
         
                      <div class="padding-center">
         
-         <div class="col s12 m6 center-align">
-              <img src="img/profile.jpg" alt="" class="circle responsive-img "> <!-- notice the "circle" class -->
+         <div class="col s12 m6 center-align-custom">
+           
+               <!-- colored -->
+    <div class="ih-item circle colored effect1 "><a href="#">
+        <div class="spinner"></div>
+
+               <div class="img">
+              <img src="img/profile.jpg" alt="img" class="circle responsive-img ch-thumb ch-img-2"> <!-- notice the "circle" class -->
+                   </div>
+        <div class="info">
+          <div class="info-back">
+            <h3>Resume</h3>
+            <p>Yauxi Xerach Doña Sosa</p>
+          </div>
+        </div></a></div>
+    <!-- end colored -->
+           
+
             </div>
         
          <div class="col s12 m6 ">
@@ -213,9 +248,9 @@
 
 
   <div  class="section white scrollspy">
-        <div id="work" class="row card-basic-custom scrollspy container">
+        <div  class="row card-basic-custom scrollspy container">
     
-    <div class="col s12 m4 row container ">
+    <div id="work" class="col s12 m4 row container scrollspy">
         
        <div class="card small card-small-custom">
         <div class="card-image waves-effect waves-block waves-light">
@@ -241,7 +276,7 @@
             
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text text-darken-4">SGS APPS <i class="mdi-navigation-close right"></i></span>
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
        </div>
@@ -253,7 +288,7 @@
           <img class="activator" src="img/axapreview1.png">
         </div>
         <div class="card-content without-margin">
-          <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
+          <span class="card-title activator grey-text text-darken-4">WEBMED <i class="mdi-navigation-more-vert right"></i></span>
           <p><a class="modal-trigger" href="#modal1">Read more...</a></p>
             
               <!-- Modal Trigger -->
@@ -271,7 +306,7 @@
   </div>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text text-darken-4">WEBMED <i class="mdi-navigation-close right"></i></span>
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
       </div>
@@ -286,7 +321,7 @@
              <img class="activator" src="img/axapreview2.png">
           </div>
       <div class="card-content without-margin">
-          <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
+          <span class="card-title activator grey-text text-darken-4">WEBCLI <i class="mdi-navigation-more-vert right"></i></span>
           <p><a class="modal-trigger" href="#modal3">Read more...</a></p>
             
               <!-- Modal Trigger -->
@@ -304,7 +339,7 @@
   </div>
       </div>
        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text text-darken-4">WEBCLI <i class="mdi-navigation-close right"></i></span>
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
        </div>
       </div>
@@ -318,7 +353,7 @@
           <img class="activator" src="img/phypuntopreview.png">
         </div>
         <div class="card-content without-margin">
-          <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
+          <span class="card-title activator grey-text text-darken-4">PH&PUNTO <i class="mdi-navigation-more-vert right"></i></span>
           <p><a class="modal-trigger" href="#modal4">Read more...</a></p>
             
               <!-- Modal Trigger -->
@@ -336,7 +371,7 @@
   </div>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text text-darken-4">PH&PUNTO <i class="mdi-navigation-close right"></i></span>
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
        </div>
@@ -348,7 +383,7 @@
           <img class="activator" src="img/tilppreview.png">
         </div>
         <div class="card-content without-margin">
-          <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
+          <span class="card-title activator grey-text text-darken-4">TILP <i class="mdi-navigation-more-vert right"></i></span>
           <p><a class="modal-trigger" href="#modal5">Read more...</a></p>
             
               <!-- Modal Trigger -->
@@ -366,7 +401,7 @@
   </div>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text text-darken-4">TILP <i class="mdi-navigation-close right"></i></span>
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
       </div>
@@ -428,19 +463,19 @@
    
   </div>
 
-  <div id="skills" class="div-href scrollspy" ></div>
+  <div  class="div-href scrollspy" ></div>
   
     <div   class="section white scrollspy">
       
       
       
-    <div  class="col s12 row container card-basic-custom scrollspy">
+    <div class="col s12 row container card-basic-custom scrollspy">
       
       
-    <div class="card ">
+    <div   class="card scrollspy">
        <div class="card-content">
-          <span class="card-title h2-black">Advanced</span>
-             <div class="col s12 row">
+          <span  class="card-title h2-black scrollspy">Advanced</span>
+             <div id="skills" class="col s12 row scrollspy">
                           
                 <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/visual2008.png" class="responsive-img no-flex">
@@ -565,20 +600,20 @@
     <div class="card ">
        <div class="card-content">
           <span class="card-title h2-black">Strong</span>
-             <div class="col s12 row">
+             <div  class="col s12 row scrollspy">
 
                 <div class="img-wrap tam-wrap col s4 m2">
-                  <img src="img/java.jpg" class="responsive-img no-flex">
+                  <img  src="img/java.jpg" class="responsive-img no-flex scrollspy">
                   <h6>JAVA</h6>
                 </div>  
                 
                 <div class="img-wrap tam-wrap col s4 m2">
-                  <img src="img/android.png" class="responsive-img no-flex">
+                  <img  src="img/android.png" class="responsive-img no-flex">
                   <h6>ANDROID</h6>
                 </div>                  
                 
                 <div class="img-wrap tam-wrap col s4 m2">
-                  <img src="img/Icon-Visual_Basic_for_Applications.png" class="responsive-img no-flex">
+                  <img id="skillsStrong" src="img/Icon-Visual_Basic_for_Applications.png" class="scrollspy responsive-img no-flex">
                   <h6>VB 6</h6>
                 </div>                             
              
@@ -654,13 +689,13 @@
       
          </div>
       
-        <div class="col s12 row container card-basic-custom">
+        <div id="skillsHigh" class="col s12 row container card-basic-custom scrollspy">
       
       
     <div class="card ">
        <div class="card-content">
           <span class="card-title h2-black">High</span>
-             <div class="col s12 row">                          
+             <div  class="col s12 row">                          
              
                 <div class="img-wrap tam-wrap col s4 m2">
                   <img src="img/react.png" class="responsive-img no-flex">
@@ -752,16 +787,16 @@
 
   </div>
   
-  <div id="education" class="div-href scrollspy" ></div>
+  <div  class="div-href scrollspy" ></div>
   
-   <div  class="section white scrollspy">
-    <div id="education" class="row container card-basic-custom">
+   <div  id="education" class="section white scrollspy">
+    <div class="row container card-basic-custom">
 
 
-   <div id="timeline">
-  <div class="timeline-item">
+   <div  id="timeline">
+  <div   class="timeline-item ">
     <div class="timeline-icon blue darken-1"></div>
-    <div class="timeline-content">
+    <div  class="timeline-content ">
       <h6> 2015</h6>
       <p> Analisis e ingeniería de requisitos </p>
 
@@ -769,7 +804,7 @@
   
   
     </div>
-  <div class="timeline-item">
+  <div  class="timeline-item scrollspy">
     <div class="timeline-icon  yellow darken-1"> </div>
     <div class="timeline-content right">
       <h6> 2014</h6>
