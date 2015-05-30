@@ -247,7 +247,18 @@ blockquote-blue{
 
 .center-align-custom{
   
-  padding-left: 1.5em !Important;
+  padding-left: 2em !Important;
+  
+}
+
+.tabs-screen{
+  
+  display: none;
+}
+
+.tabs-screen-vis{
+  
+    display: block;
   
 }
 
@@ -262,6 +273,17 @@ blockquote-blue{
 .center-align-custom{
   
   padding-left: 10% !Important;
+  
+}
+
+.tabs-screen{
+  
+  display: block;
+}
+
+.tabs-screen-vis{
+  
+    display: none;
   
 }
 
